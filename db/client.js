@@ -1,10 +1,12 @@
 const { Client } = require('pg');
 
-const connectionString = process.env.DATABASE_URL || 'https://localhost:5432/fitness-dev';
-
 const client = new Client({
-  connectionString,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : undefined,
+user:'JAMAAL',
+host:'localhost',
+database: 'fitness-dev',
+password: '123',
+port: 5432,
+
 });
 
 module.exports = client;
